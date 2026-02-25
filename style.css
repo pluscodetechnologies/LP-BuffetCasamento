@@ -1068,7 +1068,7 @@ footer {
     text-align: left;
   }
   .whatsapp-float {
-    bottom: 100px;
+    display: none;
   }
 }
 
