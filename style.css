@@ -1,4 +1,3 @@
-/* ===== VARIÁVEIS E RESET ===== */
 * {
   margin: 0;
   padding: 0;
@@ -51,7 +50,6 @@ h1 {
   padding: 0 2rem;
 }
 
-/* ===== ESPAÇAMENTO ENTRE SEÇÕES ===== */
 section {
   padding: 7rem 0;
 }
@@ -60,11 +58,17 @@ section + section {
   margin-top: 2rem;
 }
 
-#hero, #sobre, #servicos, #fotografia, #pacotes, #depoimentos, #galeria, #contato {
+#hero,
+#sobre,
+#servicos,
+#fotografia,
+#pacotes,
+#depoimentos,
+#galeria,
+#contato {
   scroll-margin-top: 90px;
 }
 
-/* ===== NAVBAR ===== */
 .navbar {
   position: fixed;
   top: 0;
@@ -134,7 +138,6 @@ section + section {
   width: 100%;
 }
 
-/* Botão de orçamento padrão (desktop) */
 .nav-cta {
   background: var(--gold-gradient);
   color: white !important;
@@ -160,7 +163,6 @@ section + section {
   display: none !important;
 }
 
-/* Botão de orçamento para mobile (invisível no desktop) */
 .nav-cta-mobile {
   display: none;
 }
@@ -176,7 +178,6 @@ section + section {
   z-index: 1001;
 }
 
-/* ===== HERO ===== */
 .hero {
   height: 100vh;
   min-height: 750px;
@@ -280,7 +281,6 @@ section + section {
   box-shadow: var(--shadow-lg);
 }
 
-/* ===== TÍTULOS DAS SEÇÕES ===== */
 .section-title {
   text-align: center;
   font-size: 2.2rem;
@@ -310,7 +310,6 @@ section + section {
   font-weight: 300;
 }
 
-/* ===== SOBRE ===== */
 .sobre-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -343,7 +342,6 @@ section + section {
   transform: scale(1.02);
 }
 
-/* ===== CARDS COM IMAGEM ===== */
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -423,7 +421,6 @@ section + section {
   color: #b28b6f;
 }
 
-/* ===== FOTOGRAFIA ===== */
 .fotografia {
   background: linear-gradient(145deg, #f9f2ec 0%, #fdfaf7 100%);
 }
@@ -485,7 +482,6 @@ section + section {
   box-shadow: var(--shadow-md);
 }
 
-/* ===== PACOTES ===== */
 .pacotes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -557,7 +553,6 @@ section + section {
   margin: 1.5rem 0 2rem;
 }
 
-/* ===== DEPOIMENTOS ===== */
 .depoimentos {
   background: var(--bege-claro);
 }
@@ -663,7 +658,6 @@ section + section {
   transform: scale(1.3);
 }
 
-/* ===== GALERIA ===== */
 .galeria-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -685,7 +679,6 @@ section + section {
   box-shadow: var(--shadow-lg);
 }
 
-/* ===== COMO FUNCIONA ===== */
 .passos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -731,7 +724,6 @@ section + section {
   font-size: 1rem;
 }
 
-/* ===== CTA FINAL ===== */
 .cta-final {
   background:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)),
@@ -754,7 +746,6 @@ section + section {
   opacity: 0.95;
 }
 
-/* ===== RODAPÉ ===== */
 footer {
   background: #1a1a1a;
   color: #ccc;
@@ -827,28 +818,22 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ===== NOTIFICAÇÃO FLUTUANTE ===== */
 .floating-notice {
   position: fixed;
   bottom: 25px;
   left: 25px;
-
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
   color: #f0f0f0;
-
   padding: 1rem 2.2rem;
   border-radius: 50px;
   font-size: 0.85rem;
   font-weight: 300;
   letter-spacing: 0.3px;
   line-height: 1.6;
-
   box-shadow: var(--shadow-md);
   border: 1px solid rgba(255, 255, 255, 0.15);
   z-index: 999;
-
-  /* 🎯 CONTROLE DE LARGURA */
   max-width: 420px;
   width: max-content;
   white-space: normal;
@@ -860,7 +845,6 @@ footer {
   font-weight: 500;
 }
 
-/* ===== MODAL ===== */
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -955,7 +939,6 @@ footer {
   box-shadow: 0 20px 40px rgba(37, 211, 102, 0.35);
 }
 
-/* ===== RESPONSIVIDADE ===== */
 @media (max-width: 1100px) {
   .cards-grid {
     grid-template-columns: repeat(4, 1fr);
@@ -995,11 +978,9 @@ footer {
     font-size: 1.5rem;
     font-weight: 500;
   }
-  /* Oculta o botão de orçamento original no mobile */
   .nav-cta {
     display: none;
   }
-  /* Exibe o botão de orçamento dentro do menu mobile */
   .nav-cta-mobile {
     display: inline-block;
     background: var(--gold-gradient);
@@ -1025,15 +1006,14 @@ footer {
     z-index: 1001;
   }
 
-  /* Ajustes de espaçamento para títulos */
   .hero h1 {
-    margin-top: 2rem; /* afasta do topo (navbar fixa) */
+    margin-top: 2rem;
   }
   section + section {
-    margin-top: 4rem; /* mais espaço entre seções */
+    margin-top: 4rem;
   }
   .section-title {
-    margin-top: 1rem; /* títulos mais afastados do conteúdo anterior */
+    margin-top: 1rem;
   }
 
   .cards-grid {
@@ -1085,14 +1065,13 @@ footer {
     font-size: 0.75rem;
     padding: 0.6rem 1rem;
     border-radius: 30px;
-    text-align: left; /* ou center, se preferir */
+    text-align: left;
   }
   .whatsapp-float {
     bottom: 100px;
   }
 }
 
-/* ===== ANIMAÇÕES SCROLL ===== */
 .fade-up {
   opacity: 0;
   transform: translateY(40px);

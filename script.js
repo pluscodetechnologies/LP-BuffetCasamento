@@ -1,15 +1,12 @@
 (function () {
-  // ===== VARIÁVEIS GLOBAIS =====
   const WHATSAPP_NUMBER = "5511999999999";
   const WHATSAPP_MSG = "Olá, gostaria de um orçamento para meu casamento!";
-
-  // ===== MODAL =====
   const modal = document.getElementById("modalOrcamento");
   const closeModal = document.getElementById("closeModal");
   const navOrcamentoBtn = document.getElementById("navOrcamentoBtn");
   const navOrcamentoBtnMobile = document.getElementById(
     "navOrcamentoBtnMobile",
-  ); // novo botão mobile
+  );
   const btnOrcamentoHero = document.getElementById("btnOrcamentoHero");
   const btnOrcamentoFinal = document.getElementById("btnOrcamentoFinal");
   const servicoSelect = document.getElementById("servico");
@@ -67,7 +64,6 @@
     });
   }
 
-  // ===== FORMULÁRIO =====
   const form = document.getElementById("formOrcamento");
   if (form) {
     form.addEventListener("submit", (e) => {
@@ -101,7 +97,6 @@
     });
   }
 
-  // ===== WHATSAPP =====
   function openWhatsApp() {
     window.open(
       `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(WHATSAPP_MSG)}`,
@@ -120,7 +115,6 @@
       }
     });
 
-  // ===== MOBILE MENU =====
   const mobileBtn = document.getElementById("mobileMenuBtn");
   const navCenter = document.getElementById("navCenter");
   if (mobileBtn && navCenter) {
@@ -159,7 +153,6 @@
     });
   }
 
-  // ===== NAVBAR SCROLL EFFECT =====
   const navbar = document.getElementById("navbar");
   if (navbar) {
     window.addEventListener("scroll", () => {
@@ -171,7 +164,6 @@
     });
   }
 
-  // ===== CARROSSEL =====
   const slides = document.querySelectorAll(".testimonial-slide");
   const prevBtn = document.getElementById("prevBtn");
   const nextBtn = document.getElementById("nextBtn");
@@ -214,7 +206,6 @@
     prevBtn.addEventListener("click", prevSlide);
   }
 
-  // ===== GALERIA =====
   const galeriaGrid = document.getElementById("galeriaGrid");
   if (galeriaGrid) {
     const imagens = [
@@ -246,7 +237,6 @@
     });
   }
 
-  // ===== SCROLL SUAVE =====
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       const href = this.getAttribute("href");
@@ -259,7 +249,6 @@
     });
   });
 
-  // ===== ANIMAÇÕES SCROLL =====
   const faders = document.querySelectorAll(".fade-up");
   if (faders.length) {
     const observer = new IntersectionObserver(
@@ -275,7 +264,6 @@
     faders.forEach((el) => observer.observe(el));
   }
 
-  // ===== FALLBACK IMAGENS =====
   document
     .querySelectorAll(".card-imagem, .foto-item, .sobre-imagem")
     .forEach((el) => {
